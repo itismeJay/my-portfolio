@@ -36,6 +36,7 @@ const techStack: Record<string, string[]> = {
     "JWT",
     "REST",
     "AWS",
+    "Google Cloud Platform",
   ],
 
   "AI & APIs": [
