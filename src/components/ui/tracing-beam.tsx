@@ -1,11 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TracingBeam = ({
@@ -18,6 +13,10 @@ export const TracingBeam = ({
   const ref = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(0);
+
+  const viewBoxWidth = 20;
+  const centerX = viewBoxWidth / 2; // center of the viewBox
+  const zigzagOffset = 9; // distance from center to edge (keeps original 1/19 spacing)
 
   useEffect(() => {
     if (contentRef.current) {
@@ -32,12 +31,12 @@ export const TracingBeam = ({
 
   const y1 = useSpring(
     useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
-    { stiffness: 500, damping: 90 }
+    { stiffness: 500, damping: 90 },
   );
 
   const y2 = useSpring(
     useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
-    { stiffness: 500, damping: 90 }
+    { stiffness: 500, damping: 90 },
   );
 
   return (
@@ -49,9 +48,10 @@ export const TracingBeam = ({
         <motion.div
           transition={{ duration: 0.2, delay: 0.5 }}
           animate={{
-            boxShadow: scrollYProgress.get() > 0
-              ? "none"
-              : "rgba(30, 64, 175, 0.35) 0px 3px 8px",
+            boxShadow:
+              scrollYProgress.get() > 0
+                ? "none"
+                : "rgba(30, 64, 175, 0.35) 0px 3px 8px",
           }}
           className="border border-border/50 w-3 h-3 rounded-full bg-primary flex items-center justify-center shadow-sm"
         >
@@ -65,21 +65,21 @@ export const TracingBeam = ({
           />
         </motion.div>
         <svg
-          viewBox={`0 0 20 ${svgHeight}`}
-          width="20"
+          viewBox={`0 0 ${viewBoxWidth} ${svgHeight}`}
+          width={viewBoxWidth}
           height={svgHeight}
-          className="ml-1 block"
+          className="block"
           aria-hidden="true"
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M ${centerX - zigzagOffset} 0 V -36 l ${zigzagOffset * 2} 24 V ${svgHeight * 0.8} l -${zigzagOffset * 2} 24 V ${svgHeight}`}
             fill="none"
             stroke="#1e3a5f"
             strokeOpacity="0.16"
             transition={{ duration: 10 }}
           />
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M ${centerX - zigzagOffset} 0 V -36 l ${zigzagOffset * 2} 24 V ${svgHeight * 0.8} l -${zigzagOffset * 2} 24 V ${svgHeight}`}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.25"

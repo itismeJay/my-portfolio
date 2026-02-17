@@ -8,6 +8,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import RecommendationsSection from "@/components/RecommendationsSection";
 import SideCards from "@/components/SideCards";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 import FooterSection from "@/components/FooterSection";
 import GallerySection from "@/components/GallerySection";
 import ChatButton from "@/components/ChatButton";
@@ -17,7 +18,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <StaggeredReveal baseDelay={100} step={140}>
-        <div className="px-3 sm:px-5 md:px-9 lg:px-14 py-5 sm:py-7 md:py-10 max-w-5xl mx-auto">
+        <TracingBeam>
+          <div className="px-3 sm:px-5 md:px-9 lg:px-14 py-5 sm:py-7 md:py-10">
           {/* Hero Section */}
           <HeroSection />
 
@@ -51,7 +53,8 @@ const Index = () => {
           <div className="mt-2">
             <Globe3DDemo />
           </div>
-        </div>
+          </div>
+        </TracingBeam>
       </StaggeredReveal>
 
       {/* Chat Button */}
