@@ -17,6 +17,7 @@ const techStack: Record<string, string[]> = {
     "ESLint",
     "Prettier",
   ],
+
   Backend: [
     "Node.js",
     "Python",
@@ -27,28 +28,27 @@ const techStack: Record<string, string[]> = {
     "PostgreSQL",
     "MySQL",
     "MongoDB",
+    "Supabase",
+    "Firebase",
+    "Neon",
+    "Drizzle ORM",
     "OAuth",
     "JWT",
     "REST",
     "AWS",
   ],
-  // "DevOps & Cloud": ["AWS", "GitHub Actions"],
-  // "DevOps & Cloud": ["AWS", "GCP", "Azure", "GitHub Actions", "Jenkins", "GitLab CI", "Terraform", "AWS CloudFormation", "Docker", "Kubernetes", "Prometheus", "Grafana", "Datadog"],
-  // "AI & Machine Learning": ["TensorFlow", "PyTorch", "LangChain", "Transformers", "OpenAI", "Anthropic", "Mistral", "Hugging Face", "LlamaIndex", "AutoGPT"],
-  // "Security & Identity": [
-  //   "AWS IAM",
-  //   "Azure AD",
-  //   "Okta",
-  //   "SAP CDC",
-  //   "Auth0",
-  //   "Cognito",
-  //   "AES",
-  //   "RSA",
-  //   "SHA",
-  //   "GDPR",
-  //   "SOC 2",
-  //   "ISO 27001",
-  // ],
+
+  "AI & APIs": [
+    "OpenAI",
+    "Gemini",
+    "Anthropic",
+    "OpenRouter",
+    "Vapi AI",
+    "AssemblyAI",
+  ],
+
+  "Version Control & Tools": ["Git", "GitHub"],
+
   "CMS & No-Code": [
     "Strapi",
     "Webflow",
@@ -75,7 +75,7 @@ const TechStackPage = () => {
           </div>
 
           <div className="space-y-8 sm:space-y-10">
-            {Object.entries(techStack).map(([category, techs], i) => (
+            {Object.entries(techStack).map(([category, techs]) => (
               <StaggeredReveal key={category} baseDelay={0} step={200}>
                 <div>
                   <h2 className="text-base font-semibold text-foreground mb-3 sm:mb-4">
