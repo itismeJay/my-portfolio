@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 import { useTheme } from "@/components/ThemeProvider";
+import { MapPin } from "lucide-react";
 
 const HeroSection = () => {
   const { theme, toggleTheme } = useTheme();
@@ -35,19 +36,20 @@ const HeroSection = () => {
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">
                 Rb Jay Salamanes
               </h1>
-              <CheckCircle className="w-5 h-5 text-primary fill-primary" />
+              <CheckCircle className="w-4 h-4 text-blue-500" />
             </div>
-            <p className="text-muted-foreground text-sm mb-2">
-              📍 Metro Manila, Philippines
+            <p className="text-muted-foreground text-sm mb-2 flex items-center gap-1">
+              <MapPin className="w-4 h-4" />
+              Davao City, Philippines
             </p>
             <p className="text-secondary-foreground text-sm mb-4">
-              AI \ Software Engineer \ Content Creator
+              Full-Stack Developer | AI SaaS Builder
             </p>
           </div>
 
           <div className="hidden md:flex items-center gap-2">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-badge-bg text-badge-text text-xs font-medium">
-              🏆 DICT OpenGov Hackathon 2025 Champion
+              My Future Achievements
               <ChevronRight className="w-3 h-3" />
             </span>
             <button
@@ -65,11 +67,16 @@ const HeroSection = () => {
 
         {/* Action buttons */}
         <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary hover:bg-accent transition-colors text-sm font-medium text-foreground border border-border">
+          <a
+            href="https://calendly.com/rbjay2005/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary hover:bg-accent transition-colors text-sm font-medium text-foreground border border-border"
+          >
             <Calendar className="w-4 h-4" />
             Schedule a Call
             <ChevronRight className="w-3 h-3" />
-          </button>
+          </a>
           <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground">
             <Mail className="w-4 h-4" />
             Send Email

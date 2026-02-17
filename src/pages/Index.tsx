@@ -18,35 +18,43 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <StaggeredReveal baseDelay={100} step={140}>
         <div className="px-3 sm:px-5 md:px-9 lg:px-14 py-5 sm:py-7 md:py-10 max-w-5xl mx-auto">
+          {/* Hero Section */}
           <HeroSection />
 
+          {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4">
+            {/* Left Column */}
             <div className="space-y-4">
               <AboutSection />
               <TechStackSection />
               <ProjectsSection />
-              <CertificationsSection />
+              {/* <CertificationsSection /> */}
             </div>
 
+            {/* Right Column */}
             <div className="space-y-4">
               <SideCards />
               <ExperienceSection />
-              <RecommendationsSection />
+              {/* <RecommendationsSection /> */}
             </div>
           </div>
 
+          {/* Footer */}
           <div className="mt-4">
             <FooterSection />
           </div>
 
-          <GallerySection />
+          {/* Gallery Section */}
+          {/* <GallerySection /> */}
 
+          {/* 3D Globe Demo */}
           <div className="mt-2">
             <Globe3DDemo />
           </div>
         </div>
       </StaggeredReveal>
 
+      {/* Chat Button */}
       <ChatButton />
     </div>
   );

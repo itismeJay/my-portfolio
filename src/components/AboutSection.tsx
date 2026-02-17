@@ -7,22 +7,28 @@ const AboutSection = () => {
       <h2 className="text-lg font-semibold text-foreground mb-4">About</h2>
       <div className="space-y-4 text-sm text-secondary-foreground leading-relaxed">
         <p>
-          I'm a full-stack software engineer specializing in developing solutions with
-          JavaScript, Python, and PHP. I work on projects including building modern web
-          applications, mobile apps, search engine optimization, digital marketing, and
-          making code tutorials.
+          I’m a full-stack developer passionate about building practical,
+          user-focused digital solutions. I enjoy transforming ideas into
+          scalable applications that solve real problems and improve everyday
+          processes.
         </p>
+
         <p>
-          I've helped startups and MSMEs grow and streamline their processes through
-          software solutions. I've also built a community of over 200,000 developers
-          sharing knowledge and mentorship.
+          Through my experience as a Software Developer Intern and freelance web
+          developer, I’ve worked on modern web applications using Next.js and
+          backend technologies. These experiences helped me strengthen my
+          ability to write clean, maintainable code, communicate effectively
+          with clients, and approach challenges with a problem-solving mindset.
         </p>
+
         <p>
           <em>
-            Lately, I've been diving deeper into the world of artificial intelligence, focusing on
-            integrating AI tools and techniques into modern applications. My work now
-            includes developing AI-powered solutions, creating intelligent applications, and
-            leveraging generative AI to optimize development workflows and deliver cutting-edge technology.
+            Currently, I’m focused on building AI-powered SaaS applications —
+            integrating authentication systems, scalable backend architecture,
+            and intelligent features into real-world products. My goal is to
+            become a well-rounded software engineer capable of designing,
+            developing, and deploying complete systems from concept to
+            production.
           </em>
         </p>
       </div>
