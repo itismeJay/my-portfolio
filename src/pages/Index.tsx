@@ -1,6 +1,7 @@
+import React, { Suspense, lazy } from "react";
 import HeroSection from "@/components/HeroSection";
 import ScrollReveal from "@/components/ScrollReveal";
-import Globe3DDemo from "@/components/Globe3DDemo";
+const Globe3DDemo = lazy(() => import("@/components/Globe3DDemo"));
 import AboutSection from "@/components/AboutSection";
 import TechStackSection from "@/components/TechStackSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -51,7 +52,9 @@ const Index = () => {
 
           {/* 3D Globe Demo */}
           <div className="mt-2">
-            <Globe3DDemo />
+            <Suspense fallback={<div className="flex items-center justify-center py-6">Loading demo...</div>}>
+              <Globe3DDemo />
+            </Suspense>
           </div>
           </div>
         </TracingBeam>
