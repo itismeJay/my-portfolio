@@ -8,6 +8,9 @@ import {
   Sun,
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
+import profile200 from "@/assets/profile-photo-200.webp";
+import profile400 from "@/assets/profile-photo-400.webp";
+import profile800 from "@/assets/profile-photo-800.webp";
 import { useTheme } from "@/components/ThemeProvider";
 import { MapPin } from "lucide-react";
 
@@ -21,11 +24,20 @@ const HeroSection = () => {
         className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden flex-shrink-0 border border-border"
         style={{ backgroundColor: "hsl(var(--card))" }}
       >
-        <img
-          src={profilePhoto}
-          alt="Rb Jay Salamanes"
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet={`${profile200} 200w, ${profile400} 400w, ${profile800} 800w`}
+            sizes="(max-width: 640px) 96px, (max-width: 1024px) 144px, 192px"
+          />
+          <img
+            src={profile400}
+            alt="Rb Jay Salamanes"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
 
       {/* Info */}
