@@ -51,15 +51,15 @@ export const TracingBeam = ({
             boxShadow:
               scrollYProgress.get() > 0
                 ? "none"
-                : "rgba(30, 64, 175, 0.35) 0px 3px 8px",
+                : "rgba(62, 207, 142, 0.35) 0px 3px 8px",
           }}
           className="border border-border/50 w-3 h-3 rounded-full bg-primary flex items-center justify-center shadow-sm"
         >
           <motion.div
             transition={{ duration: 0.2, delay: 0.5 }}
             animate={{
-              backgroundColor: "#1e40af",
-              borderColor: "#1e40af",
+              backgroundColor: "#3ecf8e",
+              borderColor: "#3ecf8e",
             }}
             className="h-1.5 w-1.5 rounded-full border border-primary bg-primary"
           />
@@ -74,7 +74,7 @@ export const TracingBeam = ({
           <motion.path
             d={`M ${centerX - zigzagOffset} 0 V -36 l ${zigzagOffset * 2} 24 V ${svgHeight * 0.8} l -${zigzagOffset * 2} 24 V ${svgHeight}`}
             fill="none"
-            stroke="#1e3a5f"
+            stroke="#1e3a2f"
             strokeOpacity="0.16"
             transition={{ duration: 10 }}
           />
@@ -95,10 +95,10 @@ export const TracingBeam = ({
               y1={y1}
               y2={y2}
             >
-              <stop stopColor="#1e40af" stopOpacity="0" />
-              <stop stopColor="#1e40af" />
-              <stop offset="0.325" stopColor="#3b82f6" />
-              <stop offset="1" stopColor="#60a5fa" stopOpacity="0" />
+              <stop stopColor="#3ecf8e" stopOpacity="0" />
+              <stop stopColor="#3ecf8e" />
+              <stop offset="0.325" stopColor="#34d399" />
+              <stop offset="1" stopColor="#6ee7b7" stopOpacity="0" />
             </motion.linearGradient>
           </defs>
         </svg>

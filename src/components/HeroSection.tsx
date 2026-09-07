@@ -7,10 +7,7 @@ import {
   Moon,
   Sun,
 } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.png";
-import profile200 from "@/assets/profile-photo-200.webp";
-import profile400 from "@/assets/profile-photo-400.webp";
-import profile800 from "@/assets/profile-photo-800.webp";
+import Image from "next/image";
 import { useTheme } from "@/components/ThemeProvider";
 import { MapPin } from "lucide-react";
 
@@ -21,23 +18,17 @@ const HeroSection = () => {
     <section className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
       {/* Profile Photo */}
       <div
-        className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden flex-shrink-0 border border-border"
+        className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden flex-shrink-0 border border-border"
         style={{ backgroundColor: "hsl(var(--card))" }}
       >
-        <picture>
-          <source
-            type="image/webp"
-            srcSet={`${profile200} 200w, ${profile400} 400w, ${profile800} 800w`}
-            sizes="(max-width: 640px) 96px, (max-width: 1024px) 144px, 192px"
-          />
-          <img
-            src={profile400}
-            alt="Rb Jay Salamanes"
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
+        <Image
+          src="/assets/profile-photo.jpg"
+          alt="Rb Jay Salamanes"
+          fill
+          priority
+          sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 160px"
+          className="object-cover"
+        />
       </div>
 
       {/* Info */}
@@ -48,14 +39,14 @@ const HeroSection = () => {
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">
                 Rb Jay Salamanes
               </h1>
-              <CheckCircle className="w-4 h-4 text-blue-500" />
+              <CheckCircle className="w-4 h-4 text-primary" />
             </div>
             <p className="text-muted-foreground text-sm mb-2 flex items-center gap-1">
               <MapPin className="w-4 h-4" />
               Davao City, Philippines
             </p>
             <p className="text-secondary-foreground text-sm mb-4">
-              Full-Stack Developer | AI SaaS Builder
+              Software Engineer · Java / Spring Boot · Distributed Systems
             </p>
           </div>
 
@@ -89,14 +80,22 @@ const HeroSection = () => {
             Schedule a Call
             <ChevronRight className="w-3 h-3" />
           </a>
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground">
+          <a
+            href="mailto:salamanes.rb@gmail.com"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground"
+          >
             <Mail className="w-4 h-4" />
             Send Email
-          </button>
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground">
+          </a>
+          <a
+            href="https://github.com/itismeJay"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground"
+          >
             <FileText className="w-4 h-4" />
-            Read my blog
-          </button>
+            View GitHub
+          </a>
         </div>
       </div>
     </section>

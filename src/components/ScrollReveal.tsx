@@ -17,7 +17,7 @@ export function ScrollReveal({
   direction = "up",
   duration = 600,
 }: ScrollRevealProps) {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.1 });
 
   const getTransform = () => {
     switch (direction) {
@@ -38,7 +38,7 @@ export function ScrollReveal({
 
   return (
     <div
-      ref={ref as any}
+      ref={ref}
       className={cn(className)}
       style={{
         opacity: isVisible ? 1 : 0,

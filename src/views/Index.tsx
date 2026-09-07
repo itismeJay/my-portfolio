@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense, lazy } from "react";
 import HeroSection from "@/components/HeroSection";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -11,8 +13,8 @@ import RecommendationsSection from "@/components/RecommendationsSection";
 import SideCards from "@/components/SideCards";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import FooterSection from "@/components/FooterSection";
+import WorkWithMeSection from "@/components/WorkWithMeSection";
 import GallerySection from "@/components/GallerySection";
-import ChatButton from "@/components/ChatButton";
 import StaggeredReveal from "@/components/StaggeredReveal";
 
 const Index = () => {
@@ -42,6 +44,11 @@ const Index = () => {
             </div>
           </div>
 
+          {/* Work with me */}
+          <div className="mt-4">
+            <WorkWithMeSection />
+          </div>
+
           {/* Footer */}
           <div className="mt-4">
             <FooterSection />
@@ -59,9 +66,6 @@ const Index = () => {
           </div>
         </TracingBeam>
       </StaggeredReveal>
-
-      {/* Chat Button */}
-      <ChatButton />
     </div>
   );
 };

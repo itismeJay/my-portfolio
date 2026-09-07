@@ -1,5 +1,5 @@
 import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import StaggeredReveal from "@/components/StaggeredReveal";
 
@@ -16,7 +16,7 @@ const CertificationsSection = () => {
       <GlowingEffect spread={40} glow={false} proximity={64} disabled={false} />
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-lg font-semibold text-foreground">Recent Certifications</h2>
-        <Link to="/certifications" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors">
+        <Link href="/certifications" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors">
           View All <ChevronRight className="w-3 h-3" />
         </Link>
       </div>

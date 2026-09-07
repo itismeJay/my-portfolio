@@ -10,10 +10,10 @@ const AccessCard = () => {
 
       <div>
         <h3 className="text-sm font-bold text-foreground tracking-wider uppercase">
-          Software Developer
+          Software Engineer
         </h3>
         <p className="text-[10px] text-muted-foreground tracking-widest uppercase mt-0.5">
-          Full-Stack • SaaS • AI Integration
+          Backend • Distributed Systems • Event-Driven
         </p>
       </div>
 
@@ -43,12 +43,13 @@ const AchievementBadge = () => (
       <p className="text-primary font-bold text-sm">CURRENT FOCUS</p>
 
       <p className="text-foreground font-black text-xl">
-        AI-Powered SaaS Builder
+        Distributed Systems & Fintech Backends
       </p>
 
       <p className="text-[9px] text-muted-foreground mt-1">
-        Developing full-stack applications with Next JS, authentication systems,
-        and scalable backend architecture.
+        Building event-driven microservices with Spring Boot and Kafka —
+        choreographed sagas, idempotent processing, and real-time fraud
+        detection.
       </p>
     </div>
 

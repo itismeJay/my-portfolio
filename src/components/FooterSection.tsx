@@ -31,8 +31,8 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
               >
-                <span className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center transition-colors group-hover:bg-gray-700">
-                  <Linkedin className="w-4 h-4 text-white" />
+                <span className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Linkedin className="w-4 h-4" />
                 </span>
                 LinkedIn
               </a>
@@ -44,8 +44,8 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
               >
-                <span className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center transition-colors group-hover:bg-gray-700">
-                  <Github className="w-4 h-4 text-white" />
+                <span className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Github className="w-4 h-4" />
                 </span>
                 GitHub
               </a>
@@ -57,13 +57,13 @@ const FooterSection = () => {
         <div className="flex-1 flex flex-col gap-3">
           {/* Email */}
           <a
-            href="mailto:jaymurillosalamanes@gmail.com"
+            href="mailto:salamanes.rb@gmail.com"
             className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
           >
             <Mail className="w-4 h-4 text-muted-foreground" />
             <div>
               <p className="text-muted-foreground text-xs">Email</p>
-              <p>jaymurillosalamanes@gmail.com</p>
+              <p>salamanes.rb@gmail.com</p>
             </div>
           </a>
 
@@ -82,16 +82,17 @@ const FooterSection = () => {
             <ChevronRight className="w-3 h-3 ml-auto" />
           </a>
 
-          {/* Blog */}
+          {/* GitHub */}
           <a
+            href="https://github.com/itismeJay"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
           >
             <FileText className="w-4 h-4 text-muted-foreground" />
             <div>
-              <p className="text-muted-foreground text-xs">Blog</p>
-              <p>Read my blog</p>
+              <p className="text-muted-foreground text-xs">Code</p>
+              <p>github.com/itismeJay</p>
             </div>
             <ChevronRight className="w-3 h-3 ml-auto" />
           </a>

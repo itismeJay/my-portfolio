@@ -1,62 +1,64 @@
+"use client";
+
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
-import ChatButton from "@/components/ChatButton";
+import Link from "next/link";
 import StaggeredReveal from "@/components/StaggeredReveal";
 
 const techStack: Record<string, string[]> = {
-  Frontend: [
-    "JavaScript",
+  "Backend & APIs": [
+    "Java 21",
+    "Spring Boot",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate",
+    "Spring Cloud Gateway",
+    "OpenFeign",
+    "WebFlux",
+    "REST APIs",
+  ],
+
+  "Architecture & Messaging": [
+    "Microservices",
+    "Event-Driven Architecture",
+    "Apache Kafka",
+    "Spring Kafka",
+    "Saga Pattern",
+    "gRPC",
+    "Protocol Buffers",
+    "Idempotency",
+  ],
+
+  Data: ["PostgreSQL", "MySQL", "Redis"],
+
+  "Payments & Security": [
+    "Razorpay API",
+    "Stripe",
+    "Payment Idempotency",
+    "Fraud Screening",
+    "OTP",
+    "JWT",
+    "Keycloak",
+    "BCrypt",
+    "HMAC-SHA256",
+    "Rate Limiting",
+  ],
+
+  "Cloud & DevOps": [
+    "Docker",
+    "Docker Compose",
+    "Maven",
+    "GitHub Actions",
+    "CI/CD",
+    "AWS EC2",
+  ],
+
+  "Frontend & Testing": [
     "TypeScript",
     "React",
     "Next.js",
-    "Tailwind CSS",
-    "SCSS",
-    "Styled Components",
-    "Vite",
-    "Webpack",
-    "ESLint",
-    "Prettier",
-  ],
-
-  Backend: [
-    "Node.js",
-    "Python",
-    "Java",
-    "PHP",
-    "Express.js",
-    "Laravel",
-    "PostgreSQL",
-    "MySQL",
-    "MongoDB",
-    "Supabase",
-    "Firebase",
-    "Neon",
-    "Drizzle ORM",
-    "OAuth",
-    "JWT",
-    "REST",
-    "AWS",
-    "Google Cloud Platform",
-  ],
-
-  "AI & APIs": [
-    "OpenAI",
-    "Gemini",
-    "Anthropic",
-    "OpenRouter",
-    "Vapi AI",
-    "AssemblyAI",
-  ],
-
-  "Version Control & Tools": ["Git", "GitHub"],
-
-  "CMS & No-Code": [
-    "Strapi",
-    "Webflow",
-    "Microsoft Power Platform",
-    "n8n",
-    "WordPress",
-    "Bubble",
+    "React Native / Expo",
+    "JUnit 5",
+    "Mockito",
   ],
 };
 
@@ -67,7 +69,7 @@ const TechStackPage = () => {
         <div className="px-5 py-6 md:py-10 max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
             <Link
-              to="/"
+              href="/"
               className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> Back to Home
@@ -100,7 +102,6 @@ const TechStackPage = () => {
           </div>
         </div>
       </StaggeredReveal>
-      <ChatButton />
     </div>
   );
 };

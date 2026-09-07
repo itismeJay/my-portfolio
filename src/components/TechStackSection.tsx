@@ -1,19 +1,37 @@
 import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import StaggeredReveal from "@/components/StaggeredReveal";
 
 const techStack = {
-  Frontend: [
-    "JavaScript",
+  "Backend & APIs": [
+    "Java 21",
+    "Spring Boot",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate",
+    "Spring Cloud Gateway",
+    "WebFlux",
+    "REST APIs",
+  ],
+  "Architecture & Messaging": [
+    "Microservices",
+    "Event-Driven Architecture",
+    "Apache Kafka",
+    "Saga Pattern",
+    "gRPC",
+    "Protocol Buffers",
+    "Idempotency",
+  ],
+  Data: ["PostgreSQL", "MySQL", "Redis"],
+  "Frontend & Testing": [
     "TypeScript",
     "React",
     "Next.js",
-
-    "Tailwind CSS",
+    "React Native / Expo",
+    "JUnit 5",
+    "Mockito",
   ],
-  Backend: ["Node.js", "Python", "PHP", "Laravel", "PostgreSQL", "MongoDB"],
-  // "DevOps & Cloud": ["AWS", "GitHub Actions"],
 };
 
 const TechStackSection = () => {
@@ -23,7 +41,7 @@ const TechStackSection = () => {
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-lg font-semibold text-foreground">Tech Stack</h2>
         <Link
-          to="/tech-stack"
+          href="/tech-stack"
           className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
         >
           View All <ChevronRight className="w-3 h-3" />

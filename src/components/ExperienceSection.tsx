@@ -2,16 +2,12 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Timeline } from "@/components/ui/timeline";
 
 const experiences = [
-  // { title: "Principal AI Engineer", company: "Standard Chartered", year: "2025" },
-  // { title: "AI Ops Engineer", company: "Centre of Excellence for GenAI, Cambridge", year: "2025" },
-  { title: "Software Developer", company: "SmartAccounting AI", year: "2025" },
-  { title: "Web Developer", company: "Luxury Presence", year: "2025" },
-  { title: "Frontend Developer", company: "Certicode", year: "2024" },
-  { title: "Data Entry Intern", company: "City Hall", year: "2023" },
+  { title: "Software Engineer", company: "Optiq · Remote, Australia", year: "2025 - 2026" },
+  { title: "Software Engineer", company: "Smart Accounting AI · Remote, U.S.", year: "2025" },
   {
-    title: "BS Information Technology",
-    company: "Davao Del Norte State College",
-    year: "2023 - 2027",
+    title: "Software Developer Intern",
+    company: "Luxury Presence · Remote, U.S.",
+    year: "2024",
   },
   {
     title: "Hello World! 👋",

@@ -1,0 +1,130 @@
+/* ✅ @import MUST come first */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light theme — Supabase "light" palette */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    /* Supabase brand green #3ECF8E */
+    --primary: 153 60% 53%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 93%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 153 60% 53%;
+
+    --radius: 0.5rem;
+
+    --card-hover: 0 0% 96%;
+    --badge-bg: 153 55% 90%;
+    --badge-text: 153 55% 26%;
+    --badge-red-bg: 0 60% 94%;
+    --badge-red-text: 0 74% 42%;
+    --timeline-dot: 0 0% 80%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 153 60% 53%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 93%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 153 60% 53%;
+  }
+
+  /* Dark theme — Supabase "dark" palette (primary look) */
+  .dark {
+    --background: 0 0% 7%;        /* #121212 */
+    --foreground: 0 0% 93%;       /* #ededed */
+
+    --card: 0 0% 11%;             /* #1c1c1c */
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 93%;
+
+    /* Supabase brand green #3ECF8E */
+    --primary: 153 60% 53%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 14%;       /* #242424 */
+    --secondary-foreground: 0 0% 82%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%; /* #999 */
+
+    --accent: 0 0% 17%;          /* #2b2b2b */
+    --accent-foreground: 0 0% 92%;
+
+    --destructive: 0 62% 46%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 18%;          /* #2e2e2e */
+    --input: 0 0% 18%;
+    --ring: 153 60% 53%;
+
+    --card-hover: 0 0% 14%;
+    --badge-bg: 153 50% 14%;
+    --badge-text: 153 55% 60%;
+    --badge-red-bg: 0 50% 15%;
+    --badge-red-text: 0 74% 66%;
+    --timeline-dot: 0 0% 26%;
+
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 153 60% 53%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 153 60% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 62%));
+  }
+
+  /* Supabase-style green gradient for accent headings/CTAs */
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(153 60% 62%), hsl(153 55% 42%));
+  }
+}

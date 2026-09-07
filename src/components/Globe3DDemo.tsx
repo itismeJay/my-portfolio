@@ -23,7 +23,9 @@ export default function Globe3DDemo() {
         markers={sampleMarkers}
         className="w-[90vw] h-[90vw] sm:w-[600px] sm:h-[600px] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] max-w-full"
         config={{
-          atmosphereColor: "#4da6ff",
+          globeColor: "#1c1c1c",
+          wireframeColor: "#3ecf8e",
+          atmosphereColor: "#3ecf8e",
           atmosphereIntensity: 20,
           bumpScale: 5,
           autoRotateSpeed: 0.3,
