@@ -1,4 +1,4 @@
-**Name:** [Your Full Name]
+**Name:** Rb Jay Salamanes
 **Year Level:** 4th Year
 **Section:** BSIT4B
 **Subject:** IT415
