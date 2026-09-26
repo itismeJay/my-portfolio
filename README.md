@@ -1,3 +1,8 @@
+**Name:** [Your Full Name]
+**Year Level:** 4th Year
+**Section:** BSIT4B
+**Subject:** IT415
+
 # My Portfolio
 
 Personal portfolio site built with **Next.js** (App Router), React, TypeScript,
